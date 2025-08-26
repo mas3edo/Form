@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* الحاوية العامة */
 
 .container {
@@ -195,3 +196,202 @@ option {
   color: #ffffff;
   font-style: italic;
 }
+=======
+/* الحاوية العامة */
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* خلفية جradient */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  direction: rtl; /* عشان عربي */
+  color: #fff;
+}
+
+/* العنوان */
+h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* اللابل */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* الحقول */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* الأزرار */
+button {
+  margin-top: 18px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* زرار الـ Clear */
+button:nth-of-type(2) {
+  background: #ff4b5c;
+  color: #fff;
+}
+
+button:nth-of-type(2):hover {
+  background: #e63946;
+}
+
+/* زرار الـ Submit */
+button:nth-of-type(1) {
+  background: #00c853;
+  color: #fff;
+}
+
+button:nth-of-type(1):hover {
+  background: #00a344;
+}
+/* تنسيق السيلكت */
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none; /* يشيل السهم الافتراضي */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 16px;
+}
+
+/* اللون لما يكون مفتوح */
+select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* تنسيق الأوبشن */
+option {
+  background: #2575fc; /* لون الخلفية */
+  color: #fff; /* لون الكتابة */
+  padding: 10px;
+}
+
+/* البوب أب */
+.pop-up2,
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+  width: 320px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* العنوان جوه البوب أب */
+.pop-up2 h3,
+.pop-up h3 {
+  margin: 0;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* أيقونة الإغلاق */
+.pop-up2 svg,
+.pop-up svg {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  cursor: pointer;
+  color: #333;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+.pop-up2 svg:hover,
+.pop-up svg:hover {
+  color: #ff1744;
+}
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-family: inherit;
+}
+
+/* نخفي الإنبت الأصلي */
+.file-upload input[type="file"] {
+  display: none;
+}
+
+/* الزر */
+.file-label {
+  padding: 8px 18px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+}
+
+.file-label:hover {
+  background: #eaeaea;
+  border-color: #bbb;
+}
+
+/* اسم الملف */
+.file-name {
+  font-size: 14px;
+  color: #ffffff;
+  font-style: italic;
+}
+>>>>>>> 2c610e7f7143eb05735470cec7fb25ce9099df84
