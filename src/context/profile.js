@@ -77,7 +77,7 @@ function Profile() {
         <input
           value={user.phone}
           onChange={(e) => setUser({ ...user, phone: e.target.value })}
-          type="tel"
+          type="number"
         />
         <label htmlFor="">البريد الالكتروني</label>
         <input
