@@ -1,394 +1,154 @@
-/* الحاوية العامة */
-
+/* Container Form */
 .container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 25px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* خلفية جradient */
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  direction: rtl; /* عشان عربي */
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  background-color: #f0f2f5;
 }
 
-/* العنوان */
-h3 {
+/* Form Box */
+form {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+form h3 {
   text-align: center;
-  margin-bottom: 25px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 24px;
 }
 
-/* اللابل */
+/* Flex Rows */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Form Group */
+.form-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full width for wide inputs */
+.form-group.full-width {
+  flex: 100%;
+}
+
+/* Labels */
 label {
-  display: block;
-  margin-top: 15px;
   margin-bottom: 6px;
   font-weight: 600;
-  font-size: 14px;
+  color: #555;
 }
 
-/* الحقول */
+/* Inputs & Selects */
 input,
 select {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-size: 14px;
-  transition: all 0.3s ease-in-out;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 input:focus,
 select:focus {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 2px #fff;
-}
-
-/* الأزرار */
-button {
-  margin-top: 18px;
-  padding: 12px;
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-/* زرار الـ Clear */
-button:nth-of-type(2) {
-  background: #ff4b5c;
-  color: #fff;
-}
-
-button:nth-of-type(2):hover {
-  background: #e63946;
-}
-
-/* زرار الـ Submit */
-button:nth-of-type(1) {
-  background: #00c853;
-  color: #fff;
-}
-
-button:nth-of-type(1):hover {
-  background: #00a344;
-}
-/* تنسيق السيلكت */
-select {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
+  border-color: #007bff;
   outline: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  appearance: none; /* يشيل السهم الافتراضي */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: left 10px center;
-  background-size: 16px;
 }
 
-/* اللون لما يكون مفتوح */
-select:focus {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 2px #fff;
-}
-
-/* تنسيق الأوبشن */
-option {
-  background: #2575fc; /* لون الخلفية */
-  color: #fff; /* لون الكتابة */
-  padding: 10px;
-}
-
-/* البوب أب */
-.pop-up2,
+/* Pop-up warning */
 .pop-up {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background: #fff;
-  color: #333;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  text-align: center;
-  width: 320px;
-  transition: all 0.3s ease-in-out;
+  display: none;
+  background-color: #ffe6e6;
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #ff4d4f;
+  border-radius: 6px;
+  position: relative;
 }
 
-/* العنوان جوه البوب أب */
-.pop-up2 h3,
 .pop-up h3 {
   margin: 0;
-  margin-bottom: 15px;
-  color: #222;
+  color: #b30000;
 }
 
-/* أيقونة الإغلاق */
-.pop-up2 svg,
 .pop-up svg {
   position: absolute;
-  top: 12px;
-  right: 14px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
-  color: #333;
-  font-size: 22px;
-  transition: color 0.3s;
 }
-.pop-up2 svg:hover,
-.pop-up svg:hover {
-  color: #ff1744;
-}
-.file-upload {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 10px 0;
-  font-family: inherit;
-}
-
-/* نخفي الإنبت الأصلي */
-.file-upload input[type="file"] {
-  display: none;
-}
-
-/* الزر */
-.file-label {
-  padding: 8px 18px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #444;
-}
-
-.file-label:hover {
-  background: #eaeaea;
-  border-color: #bbb;
-}
-
-/* اسم الملف */
-.file-name {
-  font-size: 14px;
-  color: #ffffff;
-  font-style: italic;
-}
-/* الحاوية العامة */
-
-.container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 25px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* خلفية جradient */
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  direction: rtl; /* عشان عربي */
-  color: #fff;
-}
-
-/* العنوان */
-h3 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* اللابل */
-label {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 6px;
+.submit-btn {
+  width: 220px; /* عرض ثابت أصغر من كامل الصفحة */
+  padding: 12px 0;
+  font-size: 16px;
   font-weight: 600;
-  font-size: 14px;
-}
-
-/* الحقول */
-input,
-select {
-  width: 100%;
-  padding: 12px;
+  color: #fff;
+  background-color: #007bff; /* لون ثابت */
   border: none;
-  border-radius: 10px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-size: 14px;
-  transition: all 0.3s ease-in-out;
-}
-
-input:focus,
-select:focus {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 2px #fff;
-}
-
-/* الأزرار */
-button {
-  margin-top: 18px;
-  padding: 12px;
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-/* زرار الـ Clear */
-button:nth-of-type(2) {
-  background: #ff4b5c;
-  color: #fff;
-}
-
-button:nth-of-type(2):hover {
-  background: #e63946;
-}
-
-/* زرار الـ Submit */
-button:nth-of-type(1) {
-  background: #00c853;
-  color: #fff;
-}
-
-button:nth-of-type(1):hover {
-  background: #00a344;
-}
-/* تنسيق السيلكت */
-select {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  appearance: none; /* يشيل السهم الافتراضي */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: left 10px center;
-  background-size: 16px;
-}
-
-/* اللون لما يكون مفتوح */
-select:focus {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 2px #fff;
-}
-
-/* تنسيق الأوبشن */
-option {
-  background: #2575fc; /* لون الخلفية */
-  color: #fff; /* لون الكتابة */
-  padding: 10px;
-}
-
-/* البوب أب */
-.pop-up2,
-.pop-up {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background: #fff;
-  color: #333;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  text-align: center;
-  width: 320px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* العنوان جوه البوب أب */
-.pop-up2 h3,
-.pop-up h3 {
-  margin: 0;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-/* أيقونة الإغلاق */
-.pop-up2 svg,
-.pop-up svg {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  cursor: pointer;
-  color: #333;
-  font-size: 22px;
-  transition: color 0.3s;
-}
-.pop-up2 svg:hover,
-.pop-up svg:hover {
-  color: #ff1744;
-}
-.file-upload {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 10px 0;
-  font-family: inherit;
-}
-
-/* نخفي الإنبت الأصلي */
-.file-upload input[type="file"] {
-  display: none;
-}
-
-/* الزر */
-.file-label {
-  padding: 8px 18px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: 15px; /* ناعم وجذاب */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #444;
+  text-align: center;
+  margin: 20px auto; /* محاذاة للوسط */
+  display: block;
 }
 
-.file-label:hover {
-  background: #eaeaea;
-  border-color: #bbb;
+/* Hover effect */
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* اسم الملف */
-.file-name {
-  font-size: 14px;
-  color: #ffffff;
-  font-style: italic;
+/* Focus effect */
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.step {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+
+.step.active {
+  background-color: #007bff; /* اللون للمرحلة الحالية */
+}
+.step.completed {
+  background-color: #28a745; /* اللون للمرحلة المكتملة */
 }

@@ -2,12 +2,12 @@ import { useState } from "react";
 import { MyContext } from "./context";
 function MyProvider({ children }) {
   const [user, setUser] = useState({
-    FristeName: "",
+    FirstName: "",
     SecondName: "",
     LastName: "",
     Gender: "",
     id: "",
-    Adress: "",
+    IssuePlace: "",
     BirthDate: "",
     phone: "",
     email: "",

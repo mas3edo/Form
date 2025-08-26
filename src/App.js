@@ -6,6 +6,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Desires from "./context/Desires";
+
 import "./App.css";
 import Profile from "./context/profile";
 import SchoolInformation from "./context/schoolinformation";
@@ -33,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/school-information" element={<SchoolInformation />} />
+        <Route path="/desires" element={<Desires />} />
       </Routes>
     </Router>
   );
