@@ -20,17 +20,16 @@
     "react-router-dom": "^7.8.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-
   },
+  "homepage": "https://mas3edo.github.io/Form",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -48,7 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://mas3edo.github.io/Form"
-
+  }
 }
